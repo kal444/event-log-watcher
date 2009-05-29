@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventLogWatcher", "EventLogWatcher\EventLogWatcher.csproj", "{DABCBAF8-4976-42F2-AE2B-FAEC6B63F259}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventLogWatcher.WinForms", "EventLogWatcher.WinForms\EventLogWatcher.WinForms.csproj", "{73ECEDCC-3D19-4475-BE85-AE4AFB3A98EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DABCBAF8-4976-42F2-AE2B-FAEC6B63F259}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DABCBAF8-4976-42F2-AE2B-FAEC6B63F259}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DABCBAF8-4976-42F2-AE2B-FAEC6B63F259}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DABCBAF8-4976-42F2-AE2B-FAEC6B63F259}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73ECEDCC-3D19-4475-BE85-AE4AFB3A98EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73ECEDCC-3D19-4475-BE85-AE4AFB3A98EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73ECEDCC-3D19-4475-BE85-AE4AFB3A98EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73ECEDCC-3D19-4475-BE85-AE4AFB3A98EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
