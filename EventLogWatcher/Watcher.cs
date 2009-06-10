@@ -9,6 +9,7 @@ namespace EventLogWatcher
 {
     public class Watcher
     {
+        // query template for querying WMI objects
         private const string QueryTemplate =
             "SELECT * " + 
             "FROM __InstanceCreationEvent " + 
@@ -28,6 +29,7 @@ namespace EventLogWatcher
 
         public Watcher()
         {
+            // look up configurations from the app config file
             _logFileName = ConfigurationManager.AppSettings["logFileName"];
             _eventType = ConfigurationManager.AppSettings["eventType"];
             _eventCode = ConfigurationManager.AppSettings["eventCode"];
@@ -39,6 +41,7 @@ namespace EventLogWatcher
             _watcher = CreateWatcher();
         }
 
+        // call back event so that we can notify the caller what program was started
         public Action<string> EventTriggered { get; set; }
 
         public void Start()
@@ -61,6 +64,7 @@ namespace EventLogWatcher
                     Timeout = new TimeSpan(0, 0, 30)
                 }
             };
+            // needs this to read security log even with admin running it
             watcher.Scope.Options.EnablePrivileges = true;
             watcher.EventArrived += WatcherEventArrived;
 

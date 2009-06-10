@@ -34,6 +34,7 @@ namespace EventLogWatcher.WinForms
         {
             _components = new Container();
 
+            // only menu we need
             _exitContextMenuItem = new MenuItem
                                        {
                                            Index = 1,
@@ -44,6 +45,7 @@ namespace EventLogWatcher.WinForms
             _watcherNotifyIconContextMenu = new ContextMenu();
             _watcherNotifyIconContextMenu.MenuItems.Add(_exitContextMenuItem);
 
+            // add an icon for the notification
             _watcherNotifyIcon = new NotifyIcon(_components)
                                     {
                                         Icon = new Icon(typeof(WatcherApplicationContext), "Resources.watcher.ico"),
@@ -54,12 +56,21 @@ namespace EventLogWatcher.WinForms
             _watcherNotifyIcon.Click += WatcherNotifyIconClick;
         }
 
+        /// <summary>
+        /// This will show the ballon tip when a watched event is triggered. It accepts a message from the watcher
+        /// </summary>
+        /// <param name="statusMessage">message to display in the balloon tip</param>
         private void WatcherTriggered(string statusMessage)
         {
             _lastStatusMessage = String.Format(StatusMessageTemplate, statusMessage, DateTime.Now);
             ShowBalloon();
         }
 
+        /// <summary>
+        /// show the balloon when the user clicks on the icon
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void WatcherNotifyIconClick(object sender, EventArgs e)
         {
             ShowBalloon();

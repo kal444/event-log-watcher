@@ -1,5 +1,8 @@
 ﻿namespace EventLogWatcher
 {
+    /// <summary>
+    /// Tester program to try out the watcher function
+    /// </summary>
     class Program
     {
         static void Main()
