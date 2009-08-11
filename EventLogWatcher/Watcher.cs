@@ -90,13 +90,12 @@ namespace EventLogWatcher
                     }
                 };
                 proc.Start();
-            }
 
-            if (EventTriggered != null)
-            {
-                EventTriggered(_runnable);
+                if (EventTriggered != null)
+                {
+                    EventTriggered(_runnable);
+                }
             }
         }
-
     }
 }
